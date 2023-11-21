@@ -130,11 +130,11 @@ document.querySelector('.b-8').onclick = makeEight;
 
 function makeNine() {
 	//Найдите элемент
-const addSelect = document.getElementById('practicum9');
+    const addSelect = document.getElementById('practicum9');
 	//Создайте новый элемент
-const option4 = document.createElement('option');
+    const option4 = document.createElement('option');
 	//Добавьте текст в созданный эелемент
-option4.innerHTML = 'Новый вариант';
+    option4.innerHTML = 'Новый вариант';
 	//Добавьте новый элемент в выпадающий список
 	addSelect.append(option4);
 }
@@ -147,7 +147,7 @@ document.querySelector('.b-9').onclick = makeNine;
 
 function makeTen() {
 	//Ваш код
-document.getElementById('practicum10').style.display = 'none';
+    document.getElementById('practicum10').style.display = 'none';
 
 }
 
@@ -159,7 +159,9 @@ document.querySelector('.b-10').onclick = makeTen;
 
 function makeEleven() {
 	//Ваш код
-document.getElementById('practicum11').style.width = '400px',height = '200px';
+    document.getElementById('practicum11').style.width = '400px';
+
+    document.getElementById('practicum11').style.height = '200px';
 }
 
 document.querySelector('.b-11').onclick = makeEleven;
@@ -170,6 +172,10 @@ document.querySelector('.b-11').onclick = makeEleven;
 
 function makeTwelve() {
 	//Ваш код
+	const changeClass = document.querySelector('#practicum12');
+	changeClass.style.width = '400px';
+	changeClass.style.height = '200px';
+	changeClass.classList.toggle('change');
 }
 
 //Задание 13
@@ -178,6 +184,9 @@ function makeTwelve() {
 
 function makeThirteen() {
 	//Ваш код
+    const p = document.getElementsByTagName('ol')[0];
+	p.textContent = 'Первый';
+	console.log(p);
 }
 
 document.querySelector('.b-13').onclick = makeThirteen;
@@ -188,9 +197,13 @@ document.querySelector('.b-13').onclick = makeThirteen;
 
 function makeFourteen() {
 	//Найдите все элементы <p>
+	const paragraphs = document.querySelectorAll('p');
+	console.log(paragraphs);
+
 	//const paragraphs = ваш код;
 	paragraphs.forEach(function (paragraph) {
 		//Измените их текстовое содержимое у paragraph
+		paragraph.textContent = 'Огого, что могу';
 	});
 }
 
@@ -204,6 +217,7 @@ document.querySelector('.b-14').onclick = makeFourteen;
 
 function makeFifteen() {
 	//Ваш код
+	document.getElementById('practicum15').classList.remove('practicum15');
 }
 
 document.querySelector('.b-15').onclick = makeFifteen;
@@ -214,6 +228,7 @@ document.querySelector('.b-15').onclick = makeFifteen;
 
 function makeSixteen() {
 	//Ваш код
+	document.getElementById('practicum16').classList.add('practicum16');
 }
 
 document.querySelector('.b-16').onclick = makeSixteen;
@@ -224,6 +239,7 @@ document.querySelector('.b-16').onclick = makeSixteen;
 
 function makeSeventeen() {
 	//Ваш код
+	document.getElementById('practicum17').classList.toggle('color');
 }
 
 document.querySelector('.b-17').onclick = makeSeventeen;
@@ -234,6 +250,7 @@ document.querySelector('.b-17').onclick = makeSeventeen;
 
 function makeEighteen() {
 	//Ваш код
+	document.getElementById('practicum18').classList.toggle('active');
 }
 
 document.querySelector('.b-18').onclick = makeEighteen;
@@ -244,6 +261,7 @@ document.querySelector('.b-18').onclick = makeEighteen;
 
 function makeNineteen() {
 	//Ваш код
+	document.getElementById('practicum19').classList.remove('active');
 }
 
 document.querySelector('.b-19').onclick = makeNineteen;
@@ -254,6 +272,10 @@ document.querySelector('.b-19').onclick = makeNineteen;
 
 function makeTwenty() {
 	//Ваш код
+	const addInDiv = document.getElementById('practicum20');
+	const addP = document.createElement('p');
+	addP.textContent = 'Добавлено в начало';
+	addInDiv.prepend(addP);
 }
 
 document.querySelector('.b-20').onclick = makeTwenty;
@@ -264,6 +286,10 @@ document.querySelector('.b-20').onclick = makeTwenty;
 
 function makeTwentyOne() {
 	//Ваш код
+	const addInDivAppend = document.getElementById('practicum21');
+	const addPAppend = document.createElement('p');
+	addPAppend.textContent = 'Добавлено в конец';
+	addInDivAppend.append(addPAppend);
 }
 
 document.querySelector('.b-21').onclick = makeTwentyOne;
