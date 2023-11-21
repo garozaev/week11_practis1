@@ -96,6 +96,10 @@ document.querySelector('.b-6').onclick = makeSix;
 
 function makeSeven() {
 	//Ваш код
+	var a = document.querySelector('#practicum7');
+	a.href = 'https://www.google.com';
+
+	a.innerHTML = "Ссылка на Google";
 }
 
 document.querySelector('.b-7').onclick = makeSeven;
@@ -106,9 +110,16 @@ document.querySelector('.b-7').onclick = makeSeven;
 
 function makeEight() {
 	//Найдите элемент x
+	const x = document.getElementById('practicum8');
+
 	//Создайте новый пункт списка y
+	const y = document.createElement('li');
+
 	//Добавьте значение в созданный пункт списка y
+    y.textContent = 'Новый элемент';
+	
 	//Добавьте в список х новый элемент y
+	x.append(y);
 }
 
 document.querySelector('.b-8').onclick = makeEight;
@@ -119,9 +130,13 @@ document.querySelector('.b-8').onclick = makeEight;
 
 function makeNine() {
 	//Найдите элемент
+const addSelect = document.getElementById('practicum9');
 	//Создайте новый элемент
+const option4 = document.createElement('option');
 	//Добавьте текст в созданный эелемент
+option4.innerHTML = 'Новый вариант';
 	//Добавьте новый элемент в выпадающий список
+	addSelect.append(option4);
 }
 
 document.querySelector('.b-9').onclick = makeNine;
@@ -132,6 +147,8 @@ document.querySelector('.b-9').onclick = makeNine;
 
 function makeTen() {
 	//Ваш код
+document.getElementById('practicum10').style.display = 'none';
+
 }
 
 document.querySelector('.b-10').onclick = makeTen;
@@ -142,6 +159,7 @@ document.querySelector('.b-10').onclick = makeTen;
 
 function makeEleven() {
 	//Ваш код
+document.getElementById('practicum11').style.width = '400px',height = '200px';
 }
 
 document.querySelector('.b-11').onclick = makeEleven;
