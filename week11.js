@@ -300,8 +300,11 @@ document.querySelector('.b-21').onclick = makeTwentyOne;
 
 function makeTwentyTwo() {
 	//1 шаг: Найдите элемент
+	const image = document.getElementById('practicum22');
 	//2 шаг: Создайте переменную, которая проверяет наличие атрибута у найденного элемента
+	const trueOrFalse = image.hasAttribute('src');
 	//3 шаг: Найдите элемент, в который нужно вставить значение
+	document.getElementById('result22').textContent = 'Атрибут "src" присутствует: ' + trueOrFalse;
 	//4 шаг: Добавьте в эелемент текстовое значение 2 шага. Например: переменная = 'Атрибут "src" присутствует: ' + название переменной из 2 шага;
 }
 
@@ -313,6 +316,7 @@ document.querySelector('.b-22').onclick = makeTwentyTwo;
 
 function makeTwentyThree() {
 	//Ваш код
+	document.getElementById('practicum23').removeAttribute('href');
 }
 
 document.querySelector('.b-23').onclick = makeTwentyThree;
@@ -323,6 +327,7 @@ document.querySelector('.b-23').onclick = makeTwentyThree;
 
 function makeTwentyFour() {
 	//Ваш код
+	document.getElementById('practicum24').setAttribute('value', 'Новое значение');
 }
 
 document.querySelector('.b-24').onclick = makeTwentyFour;
@@ -335,7 +340,10 @@ function makeTwentyFive() {
 	//1 шаг: Найдите элемент
 	//2 шаг: Добавьте элементу, найденному в первом шаге, атрибут: ('data-info', 'Дополнительная информация');
 	//3 шаг: Запишите значение атрибута в переменную
+	document.getElementById('practicum25').setAttribute('data-info','Дополнительная информация');
+	const dataInfo = ('Дополнительная информация');
 	//4 шаг: Найдите элемент, в который нужно вставить значение из 3 шага
+	document.getElementById('infoOutput').innerHTML = 'Добавленный атрибут: ' + dataInfo;
 	//5 шаг: Добавьте в элемент 4 шага текстовое значение 3 шага. Например: переменная = 'Добавленный атрибут: ' + название переменной из 3 шага;
 }
 
