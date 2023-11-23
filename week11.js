@@ -354,7 +354,7 @@ document.querySelector('.b-25').onclick = makeTwentyFive;
 //Подсказка: Используйте метод closest для поиска ближайшего родительского элемента
 
 const button = document.querySelector('.b-26');
-// const parent = Ваш код;
+const parent = button.closest('.parent');
 
 const makeTwentySix = () => {
 	parent.style.backgroundColor = 'red';
@@ -368,9 +368,11 @@ document.querySelector('.b-26').onclick = makeTwentySix;
 
 function makeTwentySeven() {
 	//Найдите переменную
+	const result = document.getElementById('practicum27').classList.contains('highlight');
 	//Создайте переменную и сохраните в неё результат проверки метода contains. Например: const result = p.classList.contains('active');
 	//Найдите переменную, в которую нужно вывести результат
 	//Запишите результат в переменную
+	document.getElementById('result').innerHTML = result;
 }
 
 document.querySelector('.b-27').onclick = makeTwentySeven;
@@ -386,6 +388,7 @@ function handleClick() {
 }
 
 //Добавьте слушатель eventListener на кнопку buttonTaskTwentyEight
+buttonTaskTwentyEight.addEventListener('click', handleClick);
 
 //Задание 29
 //Используйте метод getElementById, чтобы найти элемент <input />. Добавьте обработчик события change, который будет выводить сообщение "Значение изменено" в консоль при изменении значения в поле ввода.
@@ -396,13 +399,15 @@ function handleChange() {
 }
 
 //Ваш код
+document.getElementById('input29').addEventListener('change', handleChange);
 
 //Задание 30
 //Используйте метод getElementById, чтобы найти элемент <div>. Добавьте обработчик события `mouseover`, который будет выводить сообщение "Курсор наведен на элемент" в консоль при наведении курсора на элемент.
 //Подсказка: Используйте метод addEventListener для добавления обработчика события. Чтобы проверить работу слушателя, нужно напечатать один символ и более в поле ввода и убрать фокус с инпута, кликнув на любое место страницы.
+const mouseOverDiv30 = document.getElementById('div30');
 
-function handleMouseOver() {
+mouseOverDiv30.addEventListener('mouseover',function () {
 	console.log('Курсор наведен на элемент');
-}
+})
 
 //Ваш код
